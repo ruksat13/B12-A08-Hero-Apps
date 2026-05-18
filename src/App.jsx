@@ -7,6 +7,7 @@ import Apps from "./pages/Apps";
 import AppDetails from "./pages/AppDetails";
 import Installation from "./pages/Installation";
 import ErrorPage from "./pages/ErrorPage";
+import MyInstallation from "./pages/MyInstallation";
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
         <Route path="/apps/:id" element={<AppDetails />} />
         <Route path="/installation" element={<Installation />} />
         <Route path="*" element={<ErrorPage />} />
+        <Route path="/my-installation" element={<MyInstallation />} />
       </Routes>
       <Footer />
     </BrowserRouter>
