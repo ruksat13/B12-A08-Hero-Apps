@@ -59,7 +59,7 @@ const Home = () => {
                 <div style={{ display: "grid", gridTemplateColumns: "repeat(4, 1fr)", gap: "16px", width: "100%" }}>
                     {topApps.map((app) => (
                         <div key={app.id} onClick={() => navigate(`/apps/${app.id}`)} style={{ background: "white", borderRadius: "4px", padding: "16px", cursor: "pointer", display: "flex", flexDirection: "column", gap: "16px" }}>
-                            <div style={{ width: "100%", aspectRatio: "1/1", borderRadius: "8px", background: "#d9d9d9" }} />
+                            <img src={app.image} alt={app.title} style={{ width: "100%", aspectRatio: "1/1", borderRadius: "8px", objectFit: "cover" }} />
                             <p style={{ fontSize: "20px", fontWeight: "500", color: "#001931", textTransform: "capitalize" }}>{app.title}</p>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>
                                 <span style={{ background: "#f1f5e8", color: "#00d390", padding: "6px 10px", borderRadius: "4px", fontSize: "16px", fontWeight: "500" }}>↓ {(app.downloads / 1000000).toFixed(0)}M</span>
