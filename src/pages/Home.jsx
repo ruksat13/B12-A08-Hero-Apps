@@ -24,11 +24,11 @@ const Home = () => {
 
                 <div className="store-buttons" style={{ display: "flex", gap: "16px" }}>
                     <a href="https://play.google.com" target="_blank" rel="noreferrer" style={{ display: "flex", alignItems: "center", gap: "10px", padding: "12px 24px", border: "1px solid #d2d2d2", borderRadius: "4px", color: "#001931", fontWeight: "600", fontSize: "20px", background: "white", width: "200px", justifyContent: "center", textDecoration: "none" }}>
-                        <SiGoogleplay size={32} color="#01875f" />
+                        <img src="/google play.png" alt="google play" style={{ width: "32px", height: "32px", objectFit: "contain" }} />
                         Google Play
                     </a>
                     <a href="https://apps.apple.com" target="_blank" rel="noreferrer" style={{ display: "flex", alignItems: "center", gap: "10px", padding: "12px 24px", border: "1px solid #d2d2d2", borderRadius: "4px", color: "#001931", fontWeight: "600", fontSize: "20px", background: "white", width: "200px", justifyContent: "center", textDecoration: "none" }}>
-                        <SiAppstore size={32} color="#0D96F6" />
+                        <img src="/app-store.png" alt="app store" style={{ width: "32px", height: "32px", objectFit: "contain" }} />
                         App Store
                     </a>
                 </div>
@@ -57,7 +57,7 @@ const Home = () => {
 
                 <div className="grid-4" style={{ display: "grid", gap: "16px", width: "100%" }}>
                     {topApps.map((app) => (
-                        <div key={app.id} onClick={() => navigate(`/apps/${app.id}`)} style={{ background: "white", borderRadius: "4px", padding: "16px", cursor: "pointer", display: "flex", flexDirection: "column", gap: "16px" }}>
+                        <div key={app.id} className="app-card" onClick={() => navigate(`/apps/${app.id}`)} style={{ background: "white", borderRadius: "4px", padding: "16px", cursor: "pointer", display: "flex", flexDirection: "column", gap: "16px" }}>
                             <img src={app.image} alt={app.title} style={{ width: "100%", aspectRatio: "1/1", borderRadius: "8px", objectFit: "cover" }} />
                             <p style={{ fontSize: "20px", fontWeight: "500", color: "#001931", textTransform: "capitalize" }}>{app.title}</p>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>

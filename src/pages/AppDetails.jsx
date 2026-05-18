@@ -86,7 +86,7 @@ const AppDetails = () => {
             <div style={{ display: "flex", flexDirection: "column", gap: "24px" }}>
                 <h2 style={{ fontSize: "24px", fontWeight: "600", color: "#001931" }}>Ratings</h2>
                 <ResponsiveContainer width="100%" height={250}>
-                    <BarChart data={app.ratings} layout="vertical" margin={{ top: 0, right: 30, left: 20, bottom: 0 }}>
+                    <BarChart data={[...app.ratings].reverse()} layout="vertical" margin={{ top: 0, right: 30, left: 20, bottom: 0 }}>
                         <CartesianGrid strokeDasharray="3 3" horizontal={false} />
                         <XAxis type="number" domain={[0, 12000]} ticks={[0, 3000, 6000, 9000, 12000]} tick={{ fill: "#627382", fontSize: 14 }} />
                         <YAxis type="category" dataKey="name" tick={{ fill: "#627382", fontSize: 14 }} width={50} />

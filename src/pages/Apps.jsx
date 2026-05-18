@@ -58,11 +58,38 @@ const Apps = () => {
             {loading ? (
                 <Loader />
             ) : displayed.length === 0 ? (
-                <div style={{ textAlign: "center", padding: "80px", fontSize: "24px", color: "#627382" }}>No App Found</div>
+                <div style={{ textAlign: "center", padding: "80px", display: "flex", flexDirection: "column", alignItems: "center", gap: "24px" }}>
+                    <div style={{
+                        fontSize: "80px",
+                        animation: "shake 0.5s ease-in-out infinite alternate"
+                    }}>🔍</div>
+                    <h3 style={{
+                        fontSize: "32px",
+                        fontWeight: "700",
+                        background: "linear-gradient(135deg, #632EE3, #9F62F2)",
+                        WebkitBackgroundClip: "text",
+                        WebkitTextFillColor: "transparent"
+                    }}>No App Found</h3>
+                    <p style={{ fontSize: "18px", color: "#627382", maxWidth: "400px", lineHeight: "28px" }}>
+                        We couldn't find any app matching <strong>"{search}"</strong>. Try a different keyword.
+                    </p>
+                    <button
+                        onClick={() => setSearch("")}
+                        style={{ background: "linear-gradient(155deg, #632EE3 5.68%, #9F62F2 88.38%)", color: "white", border: "none", borderRadius: "4px", padding: "12px 24px", fontSize: "16px", fontWeight: "600", cursor: "pointer" }}
+                    >
+                        Clear Search
+                    </button>
+                    <style>{`
+    @keyframes shake {
+      0% { transform: rotate(-10deg) scale(1); }
+      100% { transform: rotate(10deg) scale(1.1); }
+    }
+  `}</style>
+                </div>
             ) : (
                 <div className="grid-4" style={{ display: "grid", gap: "16px" }}>
                     {displayed.map((app) => (
-                        <div key={app.id} onClick={() => navigate(`/apps/${app.id}`)} style={{ background: "white", borderRadius: "4px", padding: "16px", cursor: "pointer", display: "flex", flexDirection: "column", gap: "16px" }}>
+                        <div key={app.id} className="app-card" onClick={() => navigate(`/apps/${app.id}`)} style={{ background: "white", borderRadius: "4px", padding: "16px", cursor: "pointer", display: "flex", flexDirection: "column", gap: "16px" }}>
                             <img src={app.image} alt={app.title} style={{ width: "100%", aspectRatio: "1/1", borderRadius: "8px", objectFit: "cover" }} />
                             <p style={{ fontSize: "20px", fontWeight: "500", color: "#001931", textTransform: "capitalize" }}>{app.title}</p>
                             <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center" }}>

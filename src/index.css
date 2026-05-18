@@ -138,3 +138,12 @@ a {
     line-height: 40px !important;
   }
 }
+
+.app-card {
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.app-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0px 12px 24px rgba(99, 46, 227, 0.15);
+}
