@@ -2,9 +2,14 @@
 
 # HERO.IO - App Store Platform
 
-🌐 **Live Site:** https://lucent-crostata-07830e.netlify.app/
+## 🔗 Live Links
+👉 [🌐 Click Here — Live Site](https://b12-a08-hero-apps-programming.netlify.app/)
 
-🐙 **GitHub:** https://github.com/ruksat13/B12-A08-Hero-Apps
+🔴 Previous link not working — here's why: The original Netlify link below has been automatically paused because the free plan's monthly credit limit was exceeded. Sorry for the inconvenience!
+
+❌ ~~https://lucent-crostata-07830e.netlify.app/~~ (paused)
+
+---
 
 ## Description
 HERO.IO is a modern app discovery and management platform where users can explore, install, and manage their favorite productivity apps. Built with React and Vite, it offers a seamless experience for browsing apps, viewing details, and tracking installations.
