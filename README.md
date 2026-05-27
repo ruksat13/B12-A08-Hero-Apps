@@ -1,7 +1,4 @@
 # HERO.IO - App Store Platform
-
-# HERO.IO - App Store Platform
-
 ## 🔗 Live Links
 👉 [🌐 Click Here — Live Site](https://b12-a08-hero-apps-programming.netlify.app/)
 
